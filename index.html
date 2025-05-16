@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portafolio Personal - Desarrollador</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  :root {
+    --color-primary: #6a0dad; /* deep purple */
+    --color-primary-light: #a67ff5;
+    --color-secondary: #4b0082; /* indigo */
+    --color-bg: #121212;
+    --color-text-light: #e0e0e0;
+    --color-text-dark: #222;
+    --color-accent: #00ffd1;
+    --shadow-dark: rgba(0,0,0,0.7);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--color-primary-light);
+  }
+
+  header {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+  ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  ul.nav-links li {
+    font-weight: 500;
+  }
+
+  ul.nav-links li a {
+    font-size: 1rem;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  h2.section-title {
+    font-weight: 600;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary-light);
+  }
+
+  /* Hero Section */
+  #inicio {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  #inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    color: var(--color-primary-light);
+  }
+
+  #inicio p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--color-text-light);
+  }
+
+  /* Projects */
+  #proyectos .project-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  }
+
+  .project-card {
+    background-color: #1b1b2f;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(106, 13, 173, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--color-primary-light);
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+  }
+
+  .project-card p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+  }
+
+  .project-card a {
+    align-self: flex-start;
+    font-weight: 600;
+    background: var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .project-card a:hover {
+    background: var(--color-primary-light);
+  }
+
+  /* Experience Sections */
+  .exp-item {
+    background-color: #1e1e3d;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(75, 0, 130, 0.5);
+  }
+
+  .exp-item h4 {
+    margin: 0 0 0.3rem 0;
+    color: var(--color-accent);
+  }
+
+  .exp-item span {
+    font-style: italic;
+    color: var(--color-primary-light);
+  }
+
+  .exp-item p {
+    margin: 0.3rem 0 0 0;
+    color: var(--color-text-light);
+  }
+
+  /* Footer */
+  footer {
+    background: var(--color-secondary);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 4rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    #inicio h1 {
+      font-size: 2.2rem;
+    }
+
+    ul.nav-links {
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">Mi Portafolio</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#experiencia-academica">Experiencia Académica</a></li>
+      <li><a href="#experiencia-personal">Experiencia Personal</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio">
+    <h1>Hola, soy Angely Aracelly Cadena</h1>
+    <p>Desarrollador con pasión por crear soluciones web modernas, eficientes y elegantes. Bienvenido a mi portafolio donde encontrarás mis mejores proyectos y experiencia.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2 class="section-title">Proyectos Destacados</h2>
+    <div class="project-list">
+      <article class="project-card">
+        <h3>Proyecto 1: Plataforma Web</h3>
+        <p>Desarrollo de una plataforma para gestión de tareas con tecnologías modernas y diseño responsive.</p>
+        <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+      <article class="project-card">
+        <h3>Proyecto 2: Aplicación Móvil</h3>
+        <p>App móvil multiplataforma para seguimiento de hábitos, con sincronización en la nube.</p>
+        <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+      <article class="project-card">
+        <h3>Proyecto 3: Blog Personal</h3>
+        <p>Blog técnico construido con un CMS headless y despliegue automático en la nube.</p>
+        <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="experiencia-academica">
+    <h2 class="section-title">Experiencia Académica</h2>
+    <article class="exp-item">
+      <h4>Licenciatura en Ciencias de la Computación</h4>
+      <span>Universidad Ejemplo, 2016 - 2020</span>
+      <p>Especialización en desarrollo de software, estructuras de datos y algoritmos.</p>
+    </article>
+    <article class="exp-item">
+      <h4>Curso Avanzado de Desarrollo Web</h4>
+      <span>Plataforma Educativa XYZ, 2021</span>
+      <p>Aprendizaje de frameworks modernos y mejores prácticas para desarrollo frontend y backend.</p>
+    </article>
+  </section>
+
+  <section id="experiencia-personal">
+    <h2 class="section-title">Experiencia Personal</h2>
+    <article class="exp-item">
+      <h4>Desarrollador Frontend</h4>
+      <span>Empresa ABC, 2020 - Presente</span>
+      <p>Creación de interfaces interactivas y optimización de experiencia de usuario en aplicaciones web.</p>
+    </article>
+    <article class="exp-item">
+      <h4>Prácticas en Desarrollo de Software</h4>
+      <span>Startup Innovadores, 2019</span>
+      <p>Participación en proyectos ágiles, desarrollo de funcionalidades y corrección de bugs.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>© 2024 [Tu Nombre] - Todos los derechos reservados.</p>
+  <p>Contacto: <a href="mailto:tu.email@example.com">tu.email@example.com</a></p>
+</footer>
+</body>
+</html>
+
